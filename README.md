@@ -1,10 +1,10 @@
 # Este problema representa un escenario común en la industria de viajes, donde las aerolíneas y las agencias de viajes buscan ofrecer a los pasajeros tarifas competitivas y precisas.
 
-# Imagina que trabajas en una agencia de viajes en línea que desea ofrecer a los clientes una herramienta que les permita obtener estimaciones precisas del precio de los boletos de avión para su próximo viaje. Sin embargo, el precio de un boleto de avión puede variar significativamente según múltiples factores, como la aerolínea, el destino, la temporada, la clase de servicio y la anticipación de la reserva.
+Imagina que trabajas en una agencia de viajes en línea que desea ofrecer a los clientes una herramienta que les permita obtener estimaciones precisas del precio de los boletos de avión para su próximo viaje. Sin embargo, el precio de un boleto de avión puede variar significativamente según múltiples factores, como la aerolínea, el destino, la temporada, la clase de servicio y la anticipación de la reserva.
 
-# El desafío radica en desarrollar un modelo de Machine Learning que pueda predecir el precio de un boleto de avión en función de estas diversas variables. Esto implica limpiar, explorar y transformar los datos, seleccionar características relevantes, entrenar y afinar modelos predictivos y evaluar su rendimiento de manera precisa.
+El desafío radica en desarrollar un modelo de Machine Learning que pueda predecir el precio de un boleto de avión en función de estas diversas variables. Esto implica limpiar, explorar y transformar los datos, seleccionar características relevantes, entrenar y afinar modelos predictivos y evaluar su rendimiento de manera precisa.
 
-# Considerando los datos entregados en las bases de datos, realiza las siguientes actividades:
+Considerando los datos entregados en las bases de datos, realiza las siguientes actividades:
 # 1. Describe con detenimiento el problema de negocio que se desea resolver, y cómo se va a hacer esto. Indica la metodología, tareas a realizar, variable objetivo a predecir, etc.
 
 Objetivo: Predecir el precio de un boleto de avión usando características del vuelo (como aerolínea, clase, fecha, duración, etc.).
