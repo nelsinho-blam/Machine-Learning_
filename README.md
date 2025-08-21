@@ -14,7 +14,6 @@ Objetivo: Predecir el precio de un boleto de avión usando características del 
 Variable Objetivo (target): Price
 
 Metodología:
-
 Exploración y limpieza de datos.
 Ingeniería de características.
 Selección de variables.
@@ -25,25 +24,25 @@ Optimización de hiperparámetros.
 
 import pandas as pd
 
-# Se cargan los datos
+#Se cargan los datos
 df_business = pd.read_excel('/Users/nelsonblanco/Desafio_LATAM/Gen99/Machine Learning/prueba FINAL/business.xlsx')
 
-# Revisión general
+#Revisión general
 df_business.info()
 df_business.describe()
 df_business.isnull().sum()
 
-# Se cargan los datos
+#Se cargan los datos
 df_economy = pd.read_excel('/Users/nelsonblanco/Desafio_LATAM/Gen99/Machine Learning/prueba FINAL/economy.xlsx')
 
-# Revisión general
+#Revisión general
 df_economy.info()
 df_economy.describe()
 df_economy.isnull().sum()
 
 # 3. Genera un análisis exploratorio de los dataset entregados, un análisis univariado y bivariado. Prioriza los gráficos más importantes y entrega una conclusión a partir de estos.
 
-# Univariado
+#Univariado
 import seaborn as sns
 import matplotlib.pyplot as plt
 
