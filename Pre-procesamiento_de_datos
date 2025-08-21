@@ -1,1 +1,32 @@
+# El objetivo principal es desarrollar un modelo que pueda predecir la calificación de los usuarios (User Rating) para diferentes animes 
+basándose en las características disponibles.
+Esta información será utilizada por una plataforma de streaming para mejorar su sistema de recomendaciones y ayudar a los usuarios a descubrir contenido relevante.
+La primera etapa de tu tarea implica la evaluación de la calidad de los datos. Deberás identificar valores atípicos, datos faltantes e inconsistencias en el conjunto 
+de datos. Tu objetivo es depurar los datos, documentando cada paso del proceso para asegurar la transparencia y reproducibilidad de tu análisis.
+En la siguiente etapa, realizarás un análisis exploratorio. Utilizando estadísticas descriptivas y visualizaciones, explorarás la distribución de variables clave, 
+identificando patrones y tendencias que puedan informar el preprocesamiento y la posterior modelación.
+Continuarás el proceso creando nuevas características.
+Deberás concebir al menos dos características derivadas que puedan enriquecer el análisis y mejorar la capacidad predictiva del modelo.
+Explica el razonamiento detrás de estas nuevas variables y detalla los métodos utilizados para calcularlas.
+Un aspecto crítico será la selección de características. Utilizarás métodos específicos para identificar las variables más importantes para predecir
+la calificación de usuarios de anime.
+Esta etapa es fundamental, ya que la elección de las variables adecuadas impactará directamente en la precisión y eficiencia de tus modelos predictivos.
+Como parte de un proceso iterativo, explorarás cómo la selección de características afecta tu comprensión del problema y el rendimiento potencial del modelo.
+La adaptabilidad y el refinamiento continuo son esenciales en este proceso.
 
+Para llevar a cabo todo esto, necesitarás el archivo de datos imdb_anime.csv, que contiene
+las siguientes columnas:
+
+● Title: Nombre de la animación
+● Genre: Género(s) bajo el cual cae la animación, por ejemplo, Acción, Aventura, etc.
+● User Rating: IMDb calificación de usuarios sobre 10.
+● Number of Votes: Total de usuarios de IMDb que han calificado la animación.
+● Runtime: Duración de la animación en minutos.
+● Year: Año en que se estrenó o comenzó a emitirse la animación.
+● Summary: Un resumen breve o completo de la trama de la animación. Resúmenes completos se obtienen cuando están disponibles.
+● Stars: Lista de actores principales o actores de voz involucrados en la animación.
+● Certificate: Certificación de la animación, por ejemplo, PG, PG-13, etc.
+● Metascore: Calificación de Metascore, si disponible, que es una puntuación agregada de varios críticos.
+● Gross: Ganancias brutas o recaudación en taquilla de la animación.
+● Episode: Indicador binario si la lista es para un episodio de una serie (1 para sí, 0 para no).
+● Episode Title: Título del episodio si la lista es para un episodio; de lo contrario, será None (Ninguno).
