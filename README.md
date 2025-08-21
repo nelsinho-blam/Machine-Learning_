@@ -21,21 +21,26 @@ Entrenamiento y evaluación de modelos.
 Optimización de hiperparámetros.
 
 # 2. Carga los dataset entregados y genera un reporte de calidad de los mismos. Indica qué estrategias se van a utilizar para aquellos puntos encontrados (Indicar nulos, outliers, valores perdidos, que se hará con esto, etc.)
+#Se importa
 
 import pandas as pd
 
 #Se cargan los datos
+
 df_business = pd.read_excel('/Users/nelsonblanco/Desafio_LATAM/Gen99/Machine Learning/prueba FINAL/business.xlsx')
 
 #Revisión general
+
 df_business.info()
 df_business.describe()
 df_business.isnull().sum()
 
 #Se cargan los datos
+
 df_economy = pd.read_excel('/Users/nelsonblanco/Desafio_LATAM/Gen99/Machine Learning/prueba FINAL/economy.xlsx')
 
 #Revisión general
+
 df_economy.info()
 df_economy.describe()
 df_economy.isnull().sum()
@@ -43,22 +48,26 @@ df_economy.isnull().sum()
 # 3. Genera un análisis exploratorio de los dataset entregados, un análisis univariado y bivariado. Prioriza los gráficos más importantes y entrega una conclusión a partir de estos.
 
 #Univariado
+
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# gráfico 1
+#gráfico 1
+
 plt.figure(figsize=(8,5))
 sns.histplot(df_business['price'], bins=50, kde =True)
 plt.title('Distribución de precios')
 plt.show()
 
-# gráfico 2
+#gráfico 2
+
 plt.figure(figsize=(8,5))
 sns.histplot(df_economy['price'], bins=50, kde =True)
 plt.title('Distribución de precios')
 plt.show()
 
-# Bivariado
+#Bivariado
+
 plt.figure(figsize=(10,5))
 sns.boxplot(x ='stop', y ='price', data =df_business)
 plt.xticks(rotation =90)
@@ -85,16 +94,20 @@ plt.show()
 
 # 4. Realiza un análisis de correlaciones entre las diferentes variables existentes, identificando cuáles son las variables más importantes para la predicción de la variable objetivo.
 
+#Se importa
+
 import seaborn as sns
 
-# matriz de correlación 1
+#matriz de correlación 1
+
 corr_matrix = df_business.select_dtypes(include ='number').corr()
 plt.figure(figsize=(12,8))
 sns.heatmap(corr_matrix, annot=True, cmap ='coolwarm')
 plt.title('Matriz de correlación')
 plt.show()
 
-# matriz de correlación 2
+#matriz de correlación 2
+
 corr_matrix = df_economy.select_dtypes(include ='number').corr()
 plt.figure(figsize=(12,8))
 sns.heatmap(corr_matrix, annot=True, cmap ='coolwarm')
@@ -151,7 +164,8 @@ from sklearn.linear_model import LinearRegression
 from sklearn.tree import DecisionTreeRegressor
 from xgboost import XGBRegressor
 
-# economy
+#economy
+
 X = economy_clean.drop('price', axis =1)
 y = economy_clean['price']
 
@@ -169,7 +183,8 @@ for name, model in models.items():
     model.fit(X_train, y_train)
     print(f"{name} score: {model.score(X_test, y_test):.4f}")
 
-# business
+#business
+
 X = business_clean.drop('price', axis =1)
 y = business_clean['price']
 
